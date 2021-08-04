@@ -17,7 +17,7 @@ struct VolcanoAnimation: Animable {
     }
     
     var orientation: Double {
-        return 1.0/M_PI
+        return Double.pi / 4
     }
     
     var colors: [UIColor] {

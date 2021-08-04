@@ -17,7 +17,7 @@ struct SnowAnimation: Animable {
     }
     
     var orientation: Double {
-        return M_PI
+        return Double.pi / 2
     }
     
     var position: CGPoint {
@@ -25,7 +25,7 @@ struct SnowAnimation: Animable {
     }
     
     var size: CGSize {
-        return CGSize(width: UIScreen.main.bounds.size.width, height: 1)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
     }
     
     var birthRate: Float {

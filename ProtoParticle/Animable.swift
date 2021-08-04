@@ -12,7 +12,7 @@ protocol Animable {
     var icons: [UIImage] { get }
     var orientation: Double { get }
     var position: CGPoint { get }
-    var shape: String { get }
+    var swift5shape: String { get }
     var size: CGSize { get }
     var renderMode: String { get }
 
@@ -28,8 +28,8 @@ protocol Animable {
 }
 
 extension Animable {
-    var shape: String {
-        return kCAEmitterLayerLine
+    var swift5shape: String {
+        return CAEmitterLayerEmitterShape.line.rawValue
     }
     
     var colors: [UIColor] {
@@ -41,7 +41,7 @@ extension Animable {
     }
     
     var renderMode: String {
-        return kCAEmitterLayerUnordered
+        return CAEmitterLayerRenderMode.unordered.rawValue
     }
 }
 
@@ -52,10 +52,10 @@ extension Animable {
         
         let emitter = CAEmitterLayer()
         
-        emitter.emitterShape    = self.shape
+//        emitter.emitterShape    = self.shape
         emitter.emitterPosition = self.position
         emitter.emitterSize     = self.size
-        emitter.renderMode      = self.renderMode
+//        emitter.render(in: self.renderMode as! CGContext)
         emitter.emitterCells    = self.icons.map { emitterCell(withImage: $0) }
 
         if self.colors.isEmpty {

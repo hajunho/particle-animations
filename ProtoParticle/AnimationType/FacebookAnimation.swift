@@ -17,7 +17,7 @@ struct FacebookAnimation: Animable {
     }
     
     var orientation: Double {
-        return -M_PI_2
+        return Double.pi
     }
     
     var position: CGPoint {

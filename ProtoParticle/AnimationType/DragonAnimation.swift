@@ -17,7 +17,7 @@ struct DragonAnimation: Animable {
     }
     
     var orientation: Double {
-        return M_PI_2
+        return Double.pi
     }
     
     var colors: [UIColor] {
@@ -37,6 +37,6 @@ struct DragonAnimation: Animable {
     }
     
     var renderMode: String {
-        return kCAEmitterLayerAdditive
+        return CAEmitterLayerRenderMode.additive.rawValue
     }
 }
